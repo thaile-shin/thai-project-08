@@ -10,3 +10,14 @@ body {
     font-size: 1.6rem;
     font-family: 'Gordita', sans-serif;
 }
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
