@@ -1,25 +1,26 @@
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
 .header {
     background: #eee;
     padding: 30px 0;
 }
 
 .top-bar {
-    display: flex;
-    align-items: center;
+    @extend %flexItemsCenter;
 }
 
 .navbar {
     margin-left: 144px;
     margin-right: auto;
     &__list {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         column-gap: 30px;
     }
     &__link {
         display: flex;
         column-gap: 6px;
-        color: #1a162e;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
@@ -30,14 +31,12 @@
 }
 
 .top-action {
-    display: flex;
-    align-items: center;
+    @extend %flexItemsCenter;
     column-gap: 20px;
     &__group {
+        @extend %flexItemsCenter;
         min-width: 50px;
         height: 50px;
-        display: flex;
-        align-items: center;
         border-radius: 8px;
         background: #fff;
         box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
@@ -46,10 +45,10 @@
         padding: 13px;
     }
     &__btn {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         padding: 13px 20px;
         column-gap: 10px;
+        cursor: pointer;
     }
     &__separate {
         width: 1px;
@@ -57,7 +56,6 @@
         background: #EDEDF6;
     }
     &__title {
-        color: #1a162e;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
@@ -68,5 +66,6 @@
         height: 50px;
         object-fit: cover;
         border-radius: 8px;
+        cursor: pointer;
     }
 }
