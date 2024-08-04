@@ -1132,6 +1132,8 @@ html {
   --top-act-group-bg: #fff;
   --top-act-group-shadow: rgba(198, 198, 255, 0.2);
   --top-act-group-separate: #EDEDF6;
+  --drop-down-bg: #fff;
+  --drop-down-shadow: rgba(200, 200, 200, 0.4);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1141,12 +1143,17 @@ html {
 
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(7496%) hue-rotate(124deg) brightness(99%) contrast(109%);
-  --body-bg: #292E39;
-  --header-bg: #171C28;
-  --top-act-group-bg: #292E39;
-  --top-act-group-shadow: rgba(0, 0, 0, 0.20);
-  --top-act-group-separate: #EDEDF6;
+  --icon-color: brightness(0) saturate(100%) invert(97%) sepia(0%)
+      saturate(7496%) hue-rotate(124deg) brightness(99%) contrast(109%);
+  --body-bg: #292e39;
+  --header-bg: #171c28;
+  --top-act-group-bg: #292e39;
+  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+  --top-act-group-separate: #ededf6;
+  --drop-down-bg: #2f3441;
+  --drop-down-shadow: rgba(23, 28, 40, 0.4);
+  --drop-down-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(9%)
+      saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
 }
 
 .top-action__btn, .top-action__group, .top-action, .navbar__list, .top-bar {
@@ -1169,6 +1176,9 @@ html.dark {
   }
 }
 
+.top-bar {
+  position: relative;
+}
 .top-bar__more {
   display: none;
 }
@@ -1192,11 +1202,21 @@ html.dark {
     margin-left: 50px;
   }
 }
-.navbar__list {
-  column-gap: 30px;
+.navbar__item:hover .drop-down {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar__item:first-child a {
+  padding-left: 0;
+}
+.navbar__item:last-child a {
+  padding-right: 0;
 }
 .navbar__link {
+  height: 50px;
+  padding: 0 15px;
   display: flex;
+  align-items: center;
   column-gap: 6px;
   font-size: 1.5rem;
   font-weight: 500;
@@ -1289,6 +1309,31 @@ html.dark {
   .logo__img {
     width: 24px;
   }
+}
+
+.drop-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 54px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+.drop-down__inner {
+  position: relative;
+  border-radius: 20px;
+  background: var(--drop-down-bg);
+  box-shadow: 0px 40px 90px 20px var(--drop-down-shadow);
+  padding: 30px;
+}
+.drop-down__inner::before {
+  content: url("../icons/drop-down-arrow.svg");
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50%;
+  filter: var(--drop-down-arrow-color);
 }
 
 /*# sourceMappingURL=main.css.map */
