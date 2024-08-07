@@ -7,13 +7,16 @@ html {
     --header-bg: #eee;
     --top-act-group-bg: #fff;
     --top-act-group-shadow: rgba(198, 198, 255, 0.2);
-    --top-act-group-separate: #EDEDF6; 
+    --top-act-group-separate: #ededf6;
     @include abstracts.breakpoint(lg) {
         --header-bg: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 
     // Dropdown
     --drop-down-bg: #fff;
     --drop-down-shadow: rgba(200, 200, 200, 0.4);
-    --top-menu-border-color: #D2D1D6;
+    --top-menu-border-color: #d2d1d6;
+    --menu-col-icon-color: brightness(0) saturate(100%) invert(7%) sepia(9%)
+    saturate(6461%) hue-rotate(218deg) brightness(95%) contrast(95%);
 }
