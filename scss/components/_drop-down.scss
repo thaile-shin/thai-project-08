@@ -1,3 +1,4 @@
+@use "../abstracts";
 .drop-down {
     position: absolute;
     left: 0;
@@ -12,11 +13,11 @@
         --inner-padding: 30px;
 
         position: relative;
-        max-height: var(--inner-max-height);
+
+        padding: var(--inner-padding);
         border-radius: 20px;
         background: var(--drop-down-bg);
         box-shadow: 0px 40px 90px 20px var(--drop-down-shadow);
-        padding: var(--inner-padding);
         &::before {
             content: url("../icons/drop-down-arrow.svg");
             position: absolute;
@@ -29,10 +30,12 @@
 }
 
 .top-menu {
-    max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
+    position: relative;
+
+    --main-col-width: 292px;
     &__main {
-        max-height: inherit;
-        width: 292px;
+        height: calc(min(582px, 100vh - 134px) - var(--inner-padding)*2);
+        width: var(--main-col-width);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
     }
@@ -41,11 +44,23 @@
 .menu-column {
     display: flex;
     column-gap: 14px;
+
+    &__heading a {
+        color: var(--menu-col-text-color);
+    }
+
+    + .menu-column {
+        margin-top: 22px;
+    }
     &__icon {
         position: relative;
         flex-shrink: 0;
         width: 36px;
         height: 36px;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__content {
@@ -55,7 +70,7 @@
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__icon-2 {
@@ -64,7 +79,7 @@
         bottom: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--menu-col-icon-color);
     }
 
@@ -78,6 +93,17 @@
     &__list {
         margin-top: 19px;
     }
+    
+    &__item {
+        &:hover .sub-menu{
+            display: grid;
+        }
+    }
+
+    &__item:hover > &__link {
+        color: #0071DC;
+        font-weight: 500;
+    }
 
     &__link {
         display: block;
@@ -85,10 +111,18 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
-
-        &:hover {
-            color: #0071DC;
-            font-weight: 500;
-        }
+        color: var(--menu-col-text-color);
     }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--main-col-width);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--inner-padding);
+    padding-left: var(--inner-padding);
+
+    overflow-y: auto;
 }
