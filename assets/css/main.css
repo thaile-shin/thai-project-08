@@ -1407,10 +1407,10 @@ html.dark {
 .menu-column__list {
   margin-top: 19px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071DC;
   font-weight: 500;
 }
@@ -1426,7 +1426,7 @@ html.dark {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-col-width);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   column-gap: var(--inner-padding);
   padding-left: var(--inner-padding);
