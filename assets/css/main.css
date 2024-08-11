@@ -1329,6 +1329,8 @@ html.dark {
   right: 0;
   padding-top: 54px;
   width: min(1240px, 100%);
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 }
 .drop-down__inner {
@@ -1352,9 +1354,10 @@ html.dark {
 .top-menu {
   position: relative;
   --main-col-width: 292px;
+  --max-inner-height: calc(min(582px, 100vh - 134px) - var(--inner-padding)*2);
 }
 .top-menu__main {
-  height: calc(min(582px, 100vh - 134px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   width: var(--main-col-width);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
@@ -1431,6 +1434,14 @@ html.dark {
   column-gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  position: initial;
+  inset: initial;
+  height: var(--max-inner-height);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
