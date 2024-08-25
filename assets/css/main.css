@@ -1523,6 +1523,11 @@ html.dark {
   display: flex;
   column-gap: 14px;
 }
+@media screen and (max-width: 991.98px) {
+  .menu-column {
+    margin-top: 14px;
+  }
+}
 .menu-column__heading a {
   color: var(--menu-col-text-color);
 }
@@ -1610,7 +1615,8 @@ html.dark {
   .sub-menu {
     position: static;
     grid-template-columns: 1fr;
-    padding: 20px 0 0;
+    row-gap: 14px;
+    padding-left: 0;
   }
 }
 .sub-menu--not-main {
@@ -1620,6 +1626,13 @@ html.dark {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-left: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

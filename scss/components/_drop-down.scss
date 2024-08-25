@@ -69,6 +69,10 @@
     display: flex;
     column-gap: 14px;
 
+    @include abstracts.breakpoint(lg) {
+        margin-top: 14px;
+    }
+
     &__heading a {
         color: var(--menu-col-text-color);
     }
@@ -166,8 +170,9 @@
     @include abstracts.breakpoint(lg) {
         position: static;
         grid-template-columns: 1fr;
+        row-gap: 14px;
 
-        padding: 20px 0 0;
+        padding-left: 0;
     }
 
     &--not-main {
@@ -180,5 +185,12 @@
         grid-template-columns: repeat(4, 1fr);
 
         padding-left: 0;
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            row-gap: 14px;
+
+            height: auto;
+        }
     }
 }
