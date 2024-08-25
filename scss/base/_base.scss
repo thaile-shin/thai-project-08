@@ -19,13 +19,15 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+img,
+a,
 input,
 button,
 select,
 textarea {
     font-family: inherit;
-    color: inherit
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {

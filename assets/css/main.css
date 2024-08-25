@@ -74,12 +74,15 @@ a {
   color: inherit;
 }
 
+img,
+a,
 input,
 button,
 select,
 textarea {
   font-family: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -1210,19 +1213,71 @@ html.dark {
 .navbar {
   margin-left: 129px;
 }
-@media screen and (max-width: 991.98px) {
-  .navbar {
-    display: none;
-  }
-}
 @media screen and (max-width: 1199.98px) {
   .navbar {
     margin-left: 28px;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .navbar {
+    translate: -100%;
+    position: fixed;
+    inset: 0 40% 0 0;
+    margin-left: 0;
+    background: #fff;
+    z-index: 10;
+    padding: 20px 0;
+    transition: translate ease 0.5s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.navbar__close-btn {
+  display: none;
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
+    padding: 10px 40px;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__overlay {
+    position: fixed;
+    z-index: 9;
+    inset: 0;
+    transition: opacity, visibility;
+    transition-duration: ease 0.5s;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .navbar__item:hover .drop-down {
   opacity: 1;
   visibility: visible;
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__item:hover .drop-down {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .navbar__link {
   height: 50px;
@@ -1233,6 +1288,14 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__link {
+    padding: 0 40px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    justify-content: space-between;
+  }
 }
 .navbar__arrow {
   margin-top: 4px;
