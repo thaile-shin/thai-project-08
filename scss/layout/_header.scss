@@ -25,13 +25,6 @@
     @include abstracts.breakpoint(md) {
         justify-content: space-between;
     }
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoint(lg) {
-            display: inline-block;
-        }
-    }
 }
 
 .navbar {
@@ -147,10 +140,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
     }
     &__group--single {
         @include abstracts.breakpoint(lg) {
