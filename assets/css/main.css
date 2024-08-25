@@ -1353,6 +1353,12 @@ html.dark {
   .navbar__item {
     width: 100%;
   }
+  .navbar__item:hover .drop-down {
+    display: none;
+  }
+  .navbar__item--active .drop-down {
+    display: block !important;
+  }
 }
 .navbar__link {
   height: 50px;
@@ -1374,6 +1380,15 @@ html.dark {
 }
 .navbar__arrow {
   margin-top: 4px;
+}
+@media screen and (max-width: 991.98px) {
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 
 .top-action {
@@ -1467,7 +1482,6 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .drop-down {
     position: static;
-    display: block;
     padding-top: 0;
   }
 }
