@@ -1,29 +1,26 @@
 @use "../abstracts";
 html.dark {
     --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(97%) sepia(0%)
-        saturate(7496%) hue-rotate(124deg) brightness(99%) contrast(109%);
+    --icon-color: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(7496%) hue-rotate(124deg) brightness(99%) contrast(109%);
     --body-bg: #292e39;
     --header-bg: #171c28;
     --top-act-group-bg: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.20);
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
     // Dropdown
     --drop-down-bg: #2f3441;
     --drop-down-shadow: rgba(23, 28, 40, 0.4);
-    --drop-down-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(9%)
-        saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
-    --top-menu-border-color: #171C28;
-    --menu-col-icon-color: brightness(0) saturate(100%) invert(92%) sepia(9%)
-        saturate(184%) hue-rotate(201deg) brightness(105%) contrast(96%);
-    --menu-col-text-color: #B9BABE;
+    --drop-down-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
+    --top-menu-border-color: #171c28;
+    --menu-col-icon-color: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(184%) hue-rotate(201deg) brightness(105%) contrast(96%);
+    --menu-col-text-color: #b9babe;
 
     // Sidebar
-    --sidebar-bg-color: #292E39;
-    --sidebar-shadow: rgba(23, 28, 40, 0.40);
-    }
+    --sidebar-bg-color: #292e39;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
+}
