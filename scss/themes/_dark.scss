@@ -25,8 +25,18 @@ html.dark {
     --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
     // Cate item
-    // Cate item
     --cate-item-bg: #171C28;
     --cate-item-thumb-bg: #292e39;
     --cate-item-title-color: #fff;
+
+    // Buttons
+    --filter-btn-color: fff;
+    --filter-btn-bg-color: #171C28;
+
+    // Product item
+    --product-item-bg: #171C28;
+    --product-item-shadow: rgba(0, 0, 0, 0.20);
+    --product-item-desc: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+    --like-btn-bg: #292E39;
 }
