@@ -41,5 +41,8 @@ html.dark {
     --like-btn-bg: #292E39;
 
     // Filter form
-    
+    --filter-form-bg: #292E39;
+    --filter-form-shadow: rgba(0, 0, 0, 0.40);
+    --filter-form-tag-bg: #171C28;
+    --filter-form-arrow: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
 }
