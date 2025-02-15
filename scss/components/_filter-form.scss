@@ -6,13 +6,20 @@
 .filter {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 55px;
 
     padding: 30px;
     border-radius: 20px;
 
     background-color: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+
+    &__arrow {
+        position: absolute;
+        top: -14px;
+        right: 18px;
+        height: 20.5px;
+    }
 
     &__heading {
         font-size: 2.2rem;
@@ -88,7 +95,7 @@
 
             &::placeholder {
                 font-weight: 400;
-                color: #9E9DA8;
+                color: #9e9da8;
             }
         }
 
@@ -176,5 +183,24 @@
         width: 1px;
         margin: 0 30px;
         background: #eee;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
+    &__cancel,
+    &__submit {
+        height: 38px;
+    }
+
+    &__cancel {
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
     }
 }
