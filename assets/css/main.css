@@ -2117,6 +2117,8 @@ html.dark {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   height: 46px;
   background: #f8f8fb;
   font-size: 1.8rem;
