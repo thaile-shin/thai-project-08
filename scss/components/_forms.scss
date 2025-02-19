@@ -1,0 +1,58 @@
+.form {
+    &__group {
+        margin-top: 30px;
+
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        padding: 0 12px;
+
+        border-radius: 10px;
+        border: 2px solid var(--form-border-color);
+
+        &:focus-within {
+            border-color: #77dae6;
+        }
+    }
+
+    &__input {
+        height: 100%;
+        flex: 1;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &::placeholder {
+            color: #d2d1d6;
+        }
+
+        &-icon {
+            margin-left: 12px;
+        }
+    }
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &-label {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            color: #9E9DA8;
+        }
+    }
+}
