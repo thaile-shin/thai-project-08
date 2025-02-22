@@ -1488,6 +1488,11 @@ html.dark {
   .top-action {
     margin-left: 0;
   }
+  .top-action__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .top-action__group {
   min-width: 50px;
@@ -2542,17 +2547,32 @@ html.dark {
 .auth {
   min-height: 100vh;
   display: flex;
-  align-items: center;
 }
 .auth__intro, .auth__content {
   flex: 1;
+  padding: 0 30px;
 }
 .auth__intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 50px;
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 50px;
+}
+.auth__intro-img {
+  max-width: 100%;
 }
 .auth__intro-text {
   max-width: 412px;
@@ -2563,6 +2583,18 @@ html.dark {
 }
 .auth__content {
   background: var(--auth-content-bg);
+}
+@media screen and (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    transition: translate 0.3s ease-in;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
 }
 .auth__content-inner {
   display: flex;
@@ -2608,7 +2640,7 @@ html.dark {
 }
 .auth__text {
   margin-top: 108px;
-  color: #9E9DA8;
+  color: #9e9da8;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 144.444%;
