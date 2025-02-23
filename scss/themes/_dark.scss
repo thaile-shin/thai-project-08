@@ -52,7 +52,12 @@ html.dark {
 
     // Auth
     --auth-content-bg: #292E39;
+    --auth-intro-bg: #171C28;
+    --auth-intro-text-color: #B9BABE;
+    --auth-heading-color: var(--auth-intro-text-color);
 
     // Form
     --form-border-color: #B9BABE;
+    --form-placeholder-color: #B9BABE;
+    --form-label-color: #b9babe;
 }

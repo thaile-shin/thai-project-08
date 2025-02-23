@@ -2,7 +2,7 @@
 html {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(7%) sepia(9%) saturate(6461%) hue-rotate(218deg) brightness(95%) contrast(95%);
-    
+
     --body-bg: #f6f6f6;
     --header-bg: #eee;
     --footer-bg: var(--header-bg);
@@ -35,25 +35,30 @@ html {
     }
 
     // Buttons
-    --filter-btn-color: #6C6C72;
+    --filter-btn-color: #6c6c72;
     --filter-btn-bg-color: #fff;
 
     // Product item
     --product-item-bg: #fff;
-    --product-item-shadow: rgba(237, 237, 246, 0.20);
+    --product-item-shadow: rgba(237, 237, 246, 0.2);
     --product-item-desc: #1a162e;
-    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
     --like-btn-bg: #fff;
 
     // Filter form
     --filter-form-bg: #fff;
-    --filter-form-shadow: rgba(200, 200, 200, 0.40);
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-form-tag-bg: #f8f8fb;
     --filter-form-footer-bg: #fff;
 
     // Auth
     --auth-content-bg: #fff;
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
 
     // Form
     --form-border-color: #d2d1d6;
+    --form-placeholder-color: #d2d1d6;
+    --form-label-color: #9e9da8;
 }
