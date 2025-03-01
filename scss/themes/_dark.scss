@@ -2,12 +2,12 @@
 html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(7496%) hue-rotate(124deg) brightness(99%) contrast(109%);
-    
+
     --body-bg: #292e39;
     --header-bg: #171c28;
     --footer-bg: var(--header-bg);
     --footer-text-color: #82818a;
-    
+
     --top-act-group-bg: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
@@ -29,42 +29,42 @@ html.dark {
     --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
     // Cate item
-    --cate-item-bg: #171C28;
+    --cate-item-bg: #171c28;
     --cate-item-thumb-bg: #292e39;
     --cate-item-title-color: #fff;
 
     // Buttons
     --filter-btn-color: fff;
-    --filter-btn-bg-color: #171C28;
+    --filter-btn-bg-color: #171c28;
 
     // Product item
-    --product-item-bg: #171C28;
-    --product-item-shadow: rgba(0, 0, 0, 0.20);
+    --product-item-bg: #171c28;
+    --product-item-shadow: rgba(0, 0, 0, 0.2);
     --product-item-desc: #fff;
-    --like-btn-shadow: rgba(124, 124, 124, 0.20);
-    --like-btn-bg: #292E39;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+    --like-btn-bg: #292e39;
 
     // Filter form
-    --filter-form-bg: #292E39;
-    --filter-form-shadow: rgba(0, 0, 0, 0.40);
-    --filter-form-tag-bg: #171C28;
+    --filter-form-bg: #292e39;
+    --filter-form-shadow: rgba(0, 0, 0, 0.4);
+    --form-tag-bg: #171c28;
     --filter-form-arrow: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
 
     // Auth
-    --auth-content-bg: #292E39;
-    --auth-intro-bg: #171C28;
-    --auth-intro-text-color: #B9BABE;
+    --auth-content-bg: #292e39;
+    --auth-intro-bg: #171c28;
+    --auth-intro-text-color: #b9babe;
     --auth-heading-color: var(--auth-intro-text-color);
 
     // Form
-    --form-border-color: #B9BABE;
-    --form-placeholder-color: #B9BABE;
+    --form-border-color: #b9babe;
+    --form-placeholder-color: #b9babe;
     --form-label-color: #b9babe;
 
-    // Product detail 
-    --product-detail-bg: #292E39;
+    // Product detail
+    --product-detail-bg: #292e39;
 
     // Breadcrumbs
-    --breadcrumbs-bg: #171C28;
+    --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }
