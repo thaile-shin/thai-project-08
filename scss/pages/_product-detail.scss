@@ -3,11 +3,20 @@
     display: flex;
     flex-direction: column;
     min-height: 80vh;
+    padding-bottom: 50px;
+    
     background: var(--product-detail-bg);
 }
 
 .product-container {
     margin-top: 30px;
+}
+
+.prod-info-container {
+    @include abstracts.screen(md) {
+        border-radius: 20px;
+        background: #fff;
+    }
 }
 
 .prod-preview {
@@ -16,6 +25,10 @@
     @include abstracts.screen(lg) {
         display: flex;
         flex-direction: row-reverse;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 16px;
     }
 
     &__list {
@@ -87,7 +100,7 @@
 
 .prod-info {
     padding: 60px;
-    background: #f6f6f6;
+    background: var(--prod-detail-info-bg);
 
     @include abstracts.screen(xxl) {
         padding: 40px;
@@ -95,6 +108,13 @@
 
     @include abstracts.screen(lg) {
         margin-top: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        border-radius: 20px;
+
+        margin-top: 0;
+        padding: 0 16px 16px;
     }
 
     &__heading {
@@ -108,7 +128,7 @@
     }
 
     &__tag {
-        background: #EDEDF6;
+        background: #ededf6;
     }
 
     &__card {
@@ -169,12 +189,20 @@
     @include abstracts.screen(xxl) {
         padding-left: 10px;
     }
+
+    @include abstracts.screen(lg) {
+        padding-left: 0;
+    }
 }
 
 .prod-prop {
     display: flex;
     column-gap: 16px;
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 
     &__icon {
         align-self: flex-start;

@@ -1278,6 +1278,7 @@ html {
   --form-placeholder-color: #d2d1d6;
   --form-label-color: #9e9da8;
   --product-detail-bg: #fff;
+  --prod-detail-info-bg: #f6f6f6;
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 }
@@ -1295,6 +1296,17 @@ html {
 @media screen and (max-width: 767.98px) {
   html {
     --auth-intro-bg: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --product-detail-bg: #fafafd;
+    --prod-detail-info-bg: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --breadcrumbs-bg: #fff;
   }
 }
 
@@ -1608,7 +1620,6 @@ html.dark {
 }
 
 .footer {
-  margin-top: 50px;
   padding: 50px 0;
   font-size: 1.4rem;
   background: var(--footer-bg);
@@ -2643,6 +2654,7 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .breadcrumbs {
     gap: 16px;
+    border-radius: 20px;
   }
 }
 .breadcrumbs__link {
@@ -2664,6 +2676,9 @@ html.dark {
   color: inherit;
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
@@ -2863,11 +2878,19 @@ html.dark {
   display: flex;
   flex-direction: column;
   min-height: 80vh;
+  padding-bottom: 50px;
   background: var(--product-detail-bg);
 }
 
 .product-container {
   margin-top: 30px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .prod-info-container {
+    border-radius: 20px;
+    background: #fff;
+  }
 }
 
 .prod-preview {
@@ -2877,6 +2900,11 @@ html.dark {
   .prod-preview {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .prod-preview {
+    padding: 16px;
   }
 }
 .prod-preview__list {
@@ -2942,7 +2970,7 @@ html.dark {
 
 .prod-info {
   padding: 60px;
-  background: #f6f6f6;
+  background: var(--prod-detail-info-bg);
 }
 @media screen and (max-width: 1399.98px) {
   .prod-info {
@@ -2954,6 +2982,13 @@ html.dark {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .prod-info {
+    border-radius: 20px;
+    margin-top: 0;
+    padding: 0 16px 16px;
+  }
+}
 .prod-info__heading {
   font-size: 2.6rem;
   font-weight: 500;
@@ -2963,7 +2998,7 @@ html.dark {
   margin-top: 30px;
 }
 .prod-info__tag {
-  background: #EDEDF6;
+  background: #ededf6;
 }
 .prod-info__card {
   margin-top: 30px;
@@ -3015,11 +3050,21 @@ html.dark {
     padding-left: 10px;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .prod-props {
+    padding-left: 0;
+  }
+}
 
 .prod-prop {
   display: flex;
   column-gap: 16px;
   margin-top: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .prod-prop {
+    margin-top: 20px;
+  }
 }
 .prod-prop__icon {
   align-self: flex-start;
