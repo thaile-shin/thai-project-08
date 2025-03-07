@@ -66,14 +66,14 @@
     }
 
     a {
-        color: #3995b9;
+        color: #0071dc;
         text-decoration: underline;
     }
 
     blockquote {
-        background: rgba(255, 183, 0, 0.1);
+        background: rgba(119, 218, 230, 0.1);
         padding: 20px;
-        border-left: 3px solid #ffb700;
+        border-left: 3px solid #77dae6;
 
         p {
             margin: 0;
@@ -84,7 +84,7 @@
         margin: 40px 0;
         border: none;
         height: 1.5px;
-        background: #ebebeb;
+        background: var(--text-content-hr-bg);
     }
 
     ul {

@@ -1296,6 +1296,7 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
+  --text-content-hr-bg: #ebebeb;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1322,6 +1323,11 @@ html {
 @media screen and (max-width: 767.98px) {
   html {
     --breadcrumbs-bg: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --review-card-bg: #fff;
   }
 }
 
@@ -1371,6 +1377,8 @@ html.dark {
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
   --search-bar-bg: #171C28;
+  --review-card-bg: #171C28;
+  --text-content-hr-bg: rgb(68, 69, 73);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -2852,13 +2860,13 @@ html.dark {
   text-align: center;
 }
 .text-content a {
-  color: #3995b9;
+  color: #0071dc;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2867,7 +2875,7 @@ html.dark {
   margin: 40px 0;
   border: none;
   height: 1.5px;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg);
 }
 .text-content ul {
   list-style-type: square;
@@ -3294,6 +3302,9 @@ html.dark {
   line-height: 142.857%;
 }
 
+.prod-tab__text-content {
+  margin-top: -20px;
+}
 .prod-tab__list {
   display: flex;
   align-items: center;
@@ -3338,8 +3349,8 @@ html.dark {
 
 .prod-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 141.667%;
 }
 
