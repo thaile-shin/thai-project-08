@@ -1266,6 +1266,7 @@ html {
   --top-act-group-separate: #ededf6;
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --act-dropdown-border-color: #d2d1d6;
   --drop-down-bg: #fff;
   --drop-down-shadow: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -1343,6 +1344,9 @@ html.dark {
   --top-act-group-bg: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
+  --act-dropdown-bg: #2f3441;
+  --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --act-dropdown-border-color: #171c28;
   --drop-down-bg: #2f3441;
   --drop-down-shadow: rgba(23, 28, 40, 0.4);
   --drop-down-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1239%) hue-rotate(186deg) brightness(94%) contrast(90%);
@@ -1607,8 +1611,10 @@ html.dark {
 .top-action__group--single .top-action__btn {
   padding: 13px;
 }
-.top-action__btn {
+.top-action__btn-wrap {
   position: relative;
+}
+.top-action__btn {
   padding: 13px 20px;
   column-gap: 10px;
   cursor: pointer;
@@ -1657,15 +1663,30 @@ html.dark {
 
 .act-dropdown {
   position: absolute;
-  top: 60px;
+  top: 76px;
   right: -60px;
   width: min(500px, 100vh);
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.act-dropdown.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--act-dropdown-bg);
   box-shadow: 0px 40px 90px 20px var(--act-dropdown-shadow);
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -18px;
+  right: 80px;
+  height: 20.5px;
+  filter: var(--drop-down-arrow-color);
 }
 .act-dropdown__top {
   display: flex;
@@ -1688,7 +1709,7 @@ html.dark {
   margin: 20px 0;
   padding: 20px 0;
   border-width: 1.5px 0;
-  border-color: #d2d1d6;
+  border-color: var(--act-dropdown-border-color);
   border-style: solid;
 }
 .act-dropdown__row {
@@ -1725,7 +1746,7 @@ html.dark {
 .cart-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid #ebebeb;
+  border: 1.5px solid var(--act-dropdown-border-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
