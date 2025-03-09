@@ -334,8 +334,13 @@
         margin: 20px 0;
         padding: 20px 0;
         border-width: 1.5px 0;
-        border-color: var(--act-dropdown-border-color);
         border-style: solid;
+    }
+
+    &__seperate {
+        margin: 20px 0;
+        height: 1px;
+        background: var(--act-dropdown-border-color);
     }
 
     &__row {
