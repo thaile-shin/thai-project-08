@@ -1300,6 +1300,11 @@ html {
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
   --text-content-hr-bg: #ebebeb;
+  --checkout-breadcrumbs-bg: #fff;
+  --checkout-cart-info-bg: #fff;
+  --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
+  --checkout-border-color: #d2d1d6;
+  --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1385,6 +1390,11 @@ html.dark {
   --search-bar-bg: #171C28;
   --review-card-bg: #171C28;
   --text-content-hr-bg: rgb(68, 69, 73);
+  --checkout-breadcrumbs-bg: #171c28;
+  --checkout-cart-info-bg: #171c28;
+  --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+  --checkout-border-color: #292e39;
+  --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -3482,7 +3492,7 @@ html.dark {
   padding-bottom: 50px;
 }
 .checkout-page__breadcrumbs {
-  background: #fff;
+  background: var(--checkout-breadcrumbs-bg);
 }
 
 .checkout-container {
@@ -3497,8 +3507,8 @@ html.dark {
 .cart-info {
   padding: 30px;
   border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--checkout-cart-info-bg);
+  box-shadow: 0 20px 60px 10px var(--checkout-cart-info-shadow);
 }
 @media screen and (max-width: 767.98px) {
   .cart-info {
@@ -3534,7 +3544,7 @@ html.dark {
 .cart-info__sepearate {
   margin: 30px 0;
   height: 1px;
-  background-color: #d2d1d6;
+  background-color: var(--checkout-border-color);
 }
 .cart-info__continue {
   height: 100%;
@@ -3568,11 +3578,12 @@ html.dark {
   display: flex;
   gap: 30px;
   padding: 30px 0;
-  border-bottom: 1px solid #d2d1d6;
+  border-bottom: 1px solid var(--checkout-border-color);
 }
 @media screen and (max-width: 767.98px) {
   .cart-item {
     padding: 16px 0;
+    gap: 16px;
   }
   .cart-item:last-child {
     border: none;
@@ -3670,7 +3681,7 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .cart-item__total-price {
     text-align: left;
-    margin-top: 16px;
+    margin: 16px 0;
   }
 }
 .cart-item__ctrl-btn {
@@ -3699,7 +3710,7 @@ html.dark {
   height: 76px;
   border-radius: 14px;
   background: rgba(118, 68, 225, 0.1);
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: 0 20px 60px 10px var(--checkout-gift-shadow);
 }
 .gift-item__title {
   font-size: 1.8rem;
