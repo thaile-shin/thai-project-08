@@ -211,6 +211,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -278,6 +282,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
     }
 
     &__title,
@@ -293,24 +309,29 @@
         line-height: 146.667%;
     }
 
-    &__list {
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        color: #0071dc;
     }
 }
 
 .address-card {
     display: flex;
     margin-top: 30px;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
 
     &__left {
         flex-grow: 1;
         display: flex;
         gap: 16px;
-    }
-
-    &__choose {
-    }
-
-    &__info {
     }
 
     &__title {
@@ -320,6 +341,7 @@
     }
 
     &__desc {
+        width: min(520px, 90%);
         margin-top: 4px;
         font-size: 1.5rem;
         line-height: 146.667%;
@@ -336,6 +358,11 @@
         &-item {
             padding-left: 8px;
         }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     &__ctrl {
@@ -350,6 +377,23 @@
         &-btn {
             display: flex;
             align-items: center;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+            &::before {
+                content: url("../icons/checkbox-uncheck.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
         }
     }
 }
