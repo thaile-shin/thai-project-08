@@ -53,7 +53,7 @@
     }
 
     &__heading {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
         font-weight: 700;
         line-height: 141.667%;
     }
@@ -69,10 +69,14 @@
         z-index: 1;
 
         width: min(var(--content-width, 800px), 100% - 40px);
-        padding: 30px;
+        padding: 30px 10px 30px 30px;
         border-radius: 20px;
         background: var(--dialog-bg);
         box-shadow: 0 20px 60px 10px var(--dialog-shadow);
+
+        @include abstracts.screen(sm) {
+            padding: 20px 0 20px 20px;
+        }
     }
 
     &__text {
@@ -87,16 +91,19 @@
         flex-wrap: wrap;
         gap: 30px;
         margin-top: 30px;
-    }
+        padding-right: 20px;
 
-    @include abstracts.screen(md) {
-        padding: 20px;
-
-        &__bottom {
+        @include abstracts.screen(md) {
             gap: 20px;
         }
 
-        &__btn {
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    &__btn {
+         @include abstracts.screen(md) {
             flex: 1;
         }
     }

@@ -92,8 +92,16 @@ textarea {
   border: none;
 }
 
-input {
+input, textarea {
   background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--text-color);
 }
 
 button {
@@ -2647,6 +2655,12 @@ html.dark {
 .form__row > * {
   flex: 1;
 }
+@media screen and (max-width: 575.98px) {
+  .form__row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2688,9 +2702,7 @@ html.dark {
   padding: 12px;
 }
 .form__text-area-input {
-  width: 100%;
   resize: none;
-  background-color: transparent;
 }
 .form__text-input {
   height: 50px;
@@ -2706,6 +2718,7 @@ html.dark {
 }
 .form__input, .form__text-area-input {
   flex: 1;
+  width: 100%;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 500;
@@ -3119,7 +3132,7 @@ html.dark {
   border-radius: 0;
 }
 .modal__heading {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 141.667%;
 }
@@ -3132,10 +3145,15 @@ html.dark {
   position: relative;
   z-index: 1;
   width: min(var(--content-width, 800px), 100% - 40px);
-  padding: 30px;
+  padding: 30px 10px 30px 30px;
   border-radius: 20px;
   background: var(--dialog-bg);
   box-shadow: 0 20px 60px 10px var(--dialog-shadow);
+}
+@media screen and (max-width: 575.98px) {
+  .modal__content {
+    padding: 20px 0 20px 20px;
+  }
 }
 .modal__text {
   font-size: 1.8rem;
@@ -3148,14 +3166,19 @@ html.dark {
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 30px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 767.98px) {
-  .modal {
-    padding: 20px;
-  }
   .modal__bottom {
     gap: 20px;
   }
+}
+@media screen and (max-width: 575.98px) {
+  .modal__bottom {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
   .modal__btn {
     flex: 1;
   }
