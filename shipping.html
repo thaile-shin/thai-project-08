@@ -52,7 +52,7 @@
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
-                        <li>
+                        <li class="form__option">
                             <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Shipping </a>
                         </li>
                     </ul>
@@ -353,61 +353,100 @@
             <!-- <button class="modal__close">&times;</button> -->
             <div class="modal__content">
                 <form action="" class="form">
-                <h2 class="modal__heading">Add New Shipping Address</h2>
-                <div class="modal__body">
-                    <div class="form__row">
+                    <h2 class="modal__heading">Add New Shipping Address</h2>
+                    <div class="modal__body">
+                        <div class="form__row">
+                            <form action="" class="form">
+                                <div class="form__group">
+                                    <label for="name" class="form__label form__label--small">Name</label>
+                                    <div class="form__text-input form__text-input--small">
+                                        <input type="text" name="name" id="name" placeholder="Name" class="form__input" required minlength="2" />
+                                        <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
+                                    </div>
+                                    <p class="form__error">Name must be at least 2 characters long</p>
+                                </div>
+                            </form>
+                            <form action="" class="form">
+                                <div class="form__group">
+                                    <label for="phone" class="form__label form__label--small">Phone</label>
+                                    <div class="form__text-input form__text-input--small">
+                                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="form__input" required minlength="10" />
+                                        <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
+                                    </div>
+                                    <p class="form__error">Phone must be at least 10 characters long</p>
+                                </div>
+                            </form>
+                        </div>
                         <form action="" class="form">
                             <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
-                                <div class="form__text-input form__text-input--small">
-                                    <input type="text" name="name" id="name" placeholder="Name" class="form__input" required minlength="2" />
+                                <label for="address" class="form__label form__label--small">Address</label>
+                                <div class="form__text-area">
+                                    <textarea name="address" id="address" placeholder="Address" class="form__text-area-input" required></textarea>
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
                                 </div>
-                                <p class="form__error">Name must be at least 2 characters long</p>
+                                <p class="form__error">Address is required</p>
                             </div>
                         </form>
                         <form action="" class="form">
                             <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <label for="city" class="form__label form__label--small">City / District / Town</label>
                                 <div class="form__text-input form__text-input--small">
-                                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="form__input" required minlength="10" />
+                                    <input type="text" name="" id="" placeholder="City / District / Town" class="form__input js-toggle" toggle-target="#city-dialog" />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
+                                    
+                                    <div id="city-dialog" class="form__select-dialog hide">
+                                        <div class="form__search">
+                                            <input type="text" placeholder="Search" class="form__search-input">
+                                            <img src="./assets/icons/search-btn.svg" alt="" class="form__search-icon">
+                                        </div>
+                                        <ul class="form__options-list">
+                                            <li class="form__option">Hanoi</li>
+                                            <li class="form__option form__option--current">Thanh Hoa</li>
+                                            <li class="form__option">Thai Binh</li>
+                                            <li class="form__option">Lang Son</li>
+                                            <li class="form__option">Hai Phong</li>
+                                            <li class="form__option">Ha Nam</li>
+                                            <li class="form__option">Ninh Binh</li>
+                                            <li class="form__option">Hai Duong</li>
+                                            <li class="form__option">Quang Ninh</li>
+                                            <li class="form__option">Bac Giang</li>
+                                            <li class="form__option">Hanoi</li>
+                                            <li class="form__option">Thanh Hoa</li>
+                                            <li class="form__option">Thai Binh</li>
+                                            <li class="form__option">Lang Son</li>
+                                            <li class="form__option">Hai Phong</li>
+                                            <li class="form__option">Ha Nam</li>
+                                            <li class="form__option">Ninh Binh</li>
+                                            <li class="form__option">Hai Duong</li>
+                                            <li class="form__option">Quang Ninh</li>
+                                            <li class="form__option">Bac Giang</li>
+                                            <li class="form__option">Hanoi</li>
+                                            <li class="form__option">Thanh Hoa</li>
+                                            <li class="form__option">Thai Binh</li>
+                                            <li class="form__option">Lang Son</li>
+                                            <li class="form__option">Hai Phong</li>
+                                            <li class="form__option">Ha Nam</li>
+                                            <li class="form__option">Ninh Binh</li>
+                                            <li class="form__option">Hai Duong</li>
+                                            <li class="form__option">Quang Ninh</li>
+                                            <li class="form__option">Bac Giang</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <p class="form__error">Phone must be at least 10 characters long</p>
+                                <p class="form__error">Input City / District / Town</p>
                             </div>
                         </form>
-                    </div>
-                    <form action="" class="form">
-                        <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
-                            <div class="form__text-area">
-                                <textarea name="address" id="address" placeholder="Address" class="form__text-area-input" required></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
-                            </div>
-                            <p class="form__error">Address is required</p>
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none"/>
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
                         </div>
-                    </form>
-                    <form action="" class="form">
-                        <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City / District / Town</label>
-                            <div class="form__text-input form__text-input--small">
-                                <input type="text" name="" id="" placeholder="City / District / Town" class="form__input" />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error"/>
-                            </div>
-                            <p class="form__error">Input City / District / Town</p>
-                        </div>
-                    </form>
-                    <div class="form__group form__group--inline">
-                        <label class="form__checkbox">
-                            <input type="checkbox" name="" id="" class="form__checkbox-input d-none"/>
-                            <span class="form__checkbox-label">Set as default address</span>
-                        </label>
                     </div>
-                </div>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
-                    <button class="btn btn--small btn--primary modal__btn .btn--no-margin js-toggle" toggle-target="#add-new-address">Create</button>
-                </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
+                        <button class="btn btn--small btn--primary modal__btn .btn--no-margin js-toggle" toggle-target="#add-new-address">Create</button>
+                    </div>
                 </form>
             </div>
             <div class="modal__overlay"></div>

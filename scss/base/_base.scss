@@ -48,6 +48,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 1s 9999s;
     -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
 }
 
 button {
