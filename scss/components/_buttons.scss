@@ -94,4 +94,9 @@
     &:hover {
         opacity: 0.9;
     }
+
+    &--danger {
+        color: #fff;
+        background: #ed4337;
+    }
 }

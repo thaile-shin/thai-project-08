@@ -2409,6 +2409,10 @@ html.dark {
 .btn:hover {
   opacity: 0.9;
 }
+.btn--danger {
+  color: #fff;
+  background: #ed4337;
+}
 
 .product-item {
   padding: 16px;
@@ -2781,6 +2785,13 @@ html.dark {
   display: none;
   animation: shake 0.5s;
 }
+.form__dialog-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px;
+}
 .form__close-dialog {
   position: absolute;
   top: 0;
@@ -2798,7 +2809,7 @@ html.dark {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  border: 1px solid #d2d1d6;
+  border-bottom: 1px solid #d2d1d6;
   height: 38px;
   padding: 0 20px;
 }
@@ -2810,7 +2821,8 @@ html.dark {
 @media screen and (max-width: 575.98px) {
   .form__search {
     flex-direction: row-reverse;
-    margin-top: 50px;
+    margin: 10px 20px 0;
+    border-radius: 10px;
   }
   .form__search-icon {
     margin-left: 0;
@@ -3274,8 +3286,8 @@ html.dark {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 20px;
+  margin-top: 50px;
   padding-right: 20px;
 }
 @media screen and (max-width: 767.98px) {
@@ -3285,7 +3297,7 @@ html.dark {
 }
 @media screen and (max-width: 575.98px) {
   .modal__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 767.98px) {

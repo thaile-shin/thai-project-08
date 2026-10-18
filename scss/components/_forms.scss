@@ -158,6 +158,14 @@ $error-color: #ed4337;
         }
     }
 
+    &__dialog-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--text-color);
+        text-align: center;
+        padding: 14px;
+    }
+
     &__close-dialog {
         position: absolute;
         top: 0;
@@ -176,7 +184,7 @@ $error-color: #ed4337;
         display: flex;
         flex-shrink: 0;
         align-items: center;
-        border: 1px solid #d2d1d6;
+        border-bottom: 1px solid #d2d1d6;
         height: 38px;
         padding: 0 20px;
 
@@ -186,7 +194,8 @@ $error-color: #ed4337;
 
         @include abstracts.screen(sm) {
             flex-direction: row-reverse;
-            margin-top: 50px;
+            margin: 10px 20px 0;
+            border-radius: 10px;
 
             &-icon {
                 margin-left: 0;
