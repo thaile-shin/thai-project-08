@@ -327,6 +327,13 @@ $error-color: #ed4337;
     font-weight: 500;
     line-height: 145.455%;
 
+    &--medium {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+      margin-bottom: 20px;
+    }
+
     &--small {
       font-size: 1.4rem;
       line-height: 142.857%;
